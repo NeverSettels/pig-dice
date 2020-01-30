@@ -1,4 +1,4 @@
-$(document).ready(function) {
+$(document).ready(function() {
   $("#names").submit(function(event) {
     event.preventDefault();
     var playerOne = ("#playerOne").val();
