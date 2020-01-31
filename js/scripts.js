@@ -9,7 +9,7 @@ Game.prototype.checkWin = function(){
   if (this.playerOne.totalScore >= 50){
     this.winner=`${this.playerOne.name} Wins`
   } else if (this.playerTwo.totalScore >= 50){
-    this.winner`${this.playerTwo.name} Wins`
+    this.winner=`${this.playerTwo.name} Wins`
   }
 }
 
@@ -58,9 +58,10 @@ $(document).ready(function() {
     event.preventDefault();
     if(newGame.turn%2 != 0){
     newGame.playerOne.setScore(newGame);
+    $('#turn').text(`Turn: ${newGame.turn} ${newGame.playerOne.name}'s turn`)
       
   }else {
-    //$('#turn').text(`Turn: ${newGame.turn} ${newGame.playerTwo.name}'s turn`)
+    $('#turn').text(`Turn: ${newGame.turn} ${newGame.playerTwo.name}'s turn`)
     newGame.playerTwo.setScore(newGame);
   }
   })
